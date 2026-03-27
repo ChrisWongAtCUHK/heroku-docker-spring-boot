@@ -15,3 +15,27 @@ docker run -d -p 8080:8080 heroku-docker-spring-boot-app
 ```
 docker compose up --build
 ```
+
+## [站在 Docker 的肩膀上，部署任何語言的 Web 應用到 Heroku](https://medium.com/starbugs/deploy-any-web-application-to-heroku-with-docker-b64b9b0eb93)
+
+Build docker image
+```
+docker build -t heroku-docker-spring-boot-app .
+```
+
+在 Heroku 上新增一個 app
+```
+heroku create heroku-docker-spring-boot-app
+heroku git:remote --app heroku-docker-spring-boot-app
+```
+
+部署到 Heroku
+```
+heroku container:login
+heroku stack:set container
+heroku container:push web
+heroku container:release web
+```
+```
+heroku open
+```

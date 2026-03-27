@@ -30,26 +30,26 @@ public class HelloGradleController {
 
     @GetMapping
     public String helloGradle() {
-        // http://localhost:8081/
+        // http://localhost:8080/
         return this.helloService.getHelloMessage(String.join("", valuesArray));
     }
 
     @GetMapping("/stringValue")
     public String helloGradleStringValue() {
-        // http://localhost:8081/stringValue
+        // http://localhost:8080/stringValue
         return this.helloService.getHelloMessage(String.join("", stringValue));
     }
 
     @GetMapping("/valueFromFile")
     public String helloGradleValueFromFile() {
-        // http://localhost:8081/valueFromFile
+        // http://localhost:8080/valueFromFile
         return this.helloService.getHelloMessage(String.join("", valueFromFile));
     }
     
     @GetMapping("/systemValue")
     public String helloGradleSystemValue() {
         // ./gradlew bootRun --args='--systemValue=arguments'
-        // http://localhost:8081/systemValue
+        // http://localhost:8080/systemValue
         return this.helloService.getHelloMessage(String.join("", systemValue));
     }
     
