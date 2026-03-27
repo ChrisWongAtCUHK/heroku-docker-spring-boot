@@ -1,0 +1,56 @@
+package hello;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController("/")
+public class HelloGradleController {
+    @Autowired
+    private HelloService helloService;
+
+    // a basic and mostly useless example
+    @Value("string value")
+    private String stringValue;
+
+    // get Value got from the file assigned to the field
+    @Value("${value.from.file}")
+    private String valueFromFile;
+
+    // run 
+    //      ./gradlew bootRun --args='--systemValue=arguments'
+    // or the value would be "default value"
+    @Value("${systemValue:default value}")
+    private String systemValue;
+
+    // a bunch of values
+    @Value("${listOfValues}")
+    private String[] valuesArray;
+
+    @GetMapping
+    public String helloGradle() {
+        // http://localhost:8081/test/
+        return this.helloService.getHelloMessage(String.join("", valuesArray));
+    }
+
+    @GetMapping("/stringValue")
+    public String helloGradleStringValue() {
+        // http://localhost:8081/test/stringValue
+        return this.helloService.getHelloMessage(String.join("", stringValue));
+    }
+
+    @GetMapping("/valueFromFile")
+    public String helloGradleValueFromFile() {
+        // http://localhost:8081/test/valueFromFile
+        return this.helloService.getHelloMessage(String.join("", valueFromFile));
+    }
+    
+    @GetMapping("/systemValue")
+    public String helloGradleSystemValue() {
+        // ./gradlew bootRun --args='--systemValue=arguments'
+        // http://localhost:8081/test/systemValue
+        return this.helloService.getHelloMessage(String.join("", systemValue));
+    }
+    
+}
