@@ -11,3 +11,7 @@ or
 ```
 docker run -d -p 8080:8080 heroku-docker-spring-boot-app
 ```
+## Build and run container with `docker-compose.yml`
+```
+docker compose up --build
+```

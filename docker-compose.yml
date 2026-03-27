@@ -1,0 +1,12 @@
+version: "1"
+services:
+  directus:
+    container_name: heroku-docker-spring-boot-app
+    image: heroku-docker-spring-boot-app:latest
+    ports:
+      - 8080:8080
+    environment:
+      PORT: "8080"
+    
+
+
