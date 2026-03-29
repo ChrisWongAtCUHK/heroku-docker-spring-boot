@@ -39,3 +39,5 @@ heroku container:release web
 ```
 heroku open
 ```
+
+# [Spring Boot @ConfigurationProperties example](https://mkyong.com/spring-boot/spring-boot-configurationproperties-example/)
