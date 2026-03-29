@@ -39,3 +39,5 @@ heroku container:release web
 ```
 heroku open
 ```
+
+# [Spring @PropertySource example](https://mkyong.com/spring/spring-propertysources-example/)
