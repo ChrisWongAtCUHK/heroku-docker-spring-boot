@@ -41,3 +41,4 @@ heroku open
 ```
 
 # [Spring @PropertySource example](https://mkyong.com/spring/spring-propertysources-example/)
+## [@PropertySource with YAML](https://www.baeldung.com/spring-yaml-propertysource)

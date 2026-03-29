@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
-@PropertySource("classpath:foo.properties")
+@PropertySource(value = "classpath:foo.yml", factory = YamlPropertySourceFactory.class)
 public class App {
     public static void main(String[] args) {
         SpringApplication.run(App.class, args);
