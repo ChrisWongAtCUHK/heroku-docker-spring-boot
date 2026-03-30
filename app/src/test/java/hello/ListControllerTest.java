@@ -25,7 +25,7 @@ public class ListControllerTest {
     private MockMvc mvc;
 
     @Test
-    public void testEndpoint() throws Exception {
+    public void testList() throws Exception {
 
         mvc.perform(get("/list")
                 .contentType(MediaType.APPLICATION_JSON))
