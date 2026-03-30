@@ -18,7 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(EndpointController.class)
-public class EndpointTest {
+public class EndpointControllerTest {
     @Autowired
     private MockMvc mvc;
 
