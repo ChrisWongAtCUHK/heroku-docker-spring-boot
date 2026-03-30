@@ -43,3 +43,4 @@ heroku open
 # [Testing JSON in Spring Boot](https://mkyong.com/spring-boot/testing-json-in-spring-boot/)
 - [Testing JSON Simple Structure](https://mkyong.com/spring-boot/testing-json-in-spring-boot/#testing-json-simple-structure)
 - [Testing a List](https://mkyong.com/spring-boot/testing-json-in-spring-boot/#testing-a-list)
+- [Testing a Map](https://mkyong.com/spring-boot/testing-json-in-spring-boot/#testing-a-map)
