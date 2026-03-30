@@ -39,3 +39,6 @@ heroku container:release web
 ```
 heroku open
 ```
+
+# [Testing JSON in Spring Boot](https://mkyong.com/spring-boot/testing-json-in-spring-boot/)
+- [Testing JSON Simple Structure](https://mkyong.com/spring-boot/testing-json-in-spring-boot/#testing-json-simple-structure)
